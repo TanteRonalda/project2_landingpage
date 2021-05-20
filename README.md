@@ -15,7 +15,7 @@ To start off Udacity provided a static version of a Landing Page, that had to be
 - navigation menu is dynamically build according to the number of sections in the document
 - click on navigation item smooth-scrolls to corresponding section
 - sections are highlighted when in viewport
-- the navigation item of a section is also highlighted when that section is in viewport
+- (the navigation item of a section is also highlighted when that section is in viewport)
 
 ### Methods
 
