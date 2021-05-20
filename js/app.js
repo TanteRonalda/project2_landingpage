@@ -58,22 +58,21 @@ function addActiveClassClick () {
 function viewPortClass () {
     for (section of sections) {
         const viewedSection = section.getBoundingClientRect();
-        //the following helper function was given at www.javascripttutorial.net
-        if  (viewedSection.top >= 0 
-            &&  viewedSection.left >= 0
-            &&  viewedSection.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-            &&  viewedSection.right <= (window.innerWidth || document.documentElement.clientWidth)) 
+        //dimensions given by Udacity reviewer
+        try {
+            if  (viewedSection.top <= 150 &&  viewedSection.bottom >= 150) 
             { 
                 // add class name to section and corresponding list item
                 section.classList.add("your-active-class");
-                // I commented this out because although it is working when run it is throwing an error which I cannot seem to fix...
-                /*document.querySelector("li." + section.getAttribute("id")).classList.add("active-nav-item");*/
-            } 
-            else { 
+                document.querySelector("li." + section.getAttribute("id")).classList.add("active-nav-item");
+            } else { 
                 // remove class name from section and corresponding list item
                 section.classList.remove("your-active-class");
-                /*document.querySelector("#navbar__list li." + section.getAttribute("id")).classList.remove("active-nav-item");*/
+                document.querySelector("#navbar__list li." + section.getAttribute("id")).classList.remove("active-nav-item");
             }
+        } catch (e) {
+            console.log(e);
+        }
     };
 };
 
