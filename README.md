@@ -1,8 +1,8 @@
 # Landing Page Project
 
 ## Important note
-This repository was solely created for the submission & review process at Udacity.
-If you wish to review the commits and history of this project please go to [this folder in my other repository](https://github.com/TanteRonalda/udacity-projects/tree/main/project2_landing-page), where this project was orginally developed.
+This repository was created for the submission & review process at Udacity.
+If you wish to review all commits and the full history of this project please go to [this folder in my other repository](https://github.com/TanteRonalda/udacity-projects/tree/main/project2_landing-page), where this project was orginally developed.
 
 (I am still figuring out GitHub and wasn't aware that you were supposed to create a new repository for each project. I thought they could all be stored in one)
 
@@ -15,7 +15,7 @@ To start off Udacity provided a static version of a Landing Page, that had to be
 - navigation menu is dynamically build according to the number of sections in the document
 - click on navigation item smooth-scrolls to corresponding section
 - sections are highlighted when in viewport
-- the navigation item of a section is also highlighted when that section is in viewport
+- (the navigation item of a section is also highlighted when that section is in viewport)
 
 ### Methods
 
