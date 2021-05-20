@@ -67,12 +67,12 @@ function viewPortClass () {
                 // add class name to section and corresponding list item
                 section.classList.add("your-active-class");
                 // I commented this out because although it is working when run it is throwing an error which I cannot seem to fix...
-                document.querySelector("li." + section.getAttribute("id")).classList.add("active-nav-item");
+                /*document.querySelector("li." + section.getAttribute("id")).classList.add("active-nav-item");*/
             } 
             else { 
                 // remove class name from section and corresponding list item
                 section.classList.remove("your-active-class");
-                document.querySelector("#navbar__list li." + section.getAttribute("id")).classList.remove("active-nav-item");
+                /*document.querySelector("#navbar__list li." + section.getAttribute("id")).classList.remove("active-nav-item");*/
             }
     };
 };
