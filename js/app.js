@@ -16,6 +16,16 @@
 /**
  * Define Global Variables
 */
+
+//Build navigation 
+window.onload = dynamicNavigation;
+
+document.addEventListener("scroll", function() {
+    addActiveClassClick();
+    scrollingSmoothly();
+    viewPortClass();
+});
+
 const sections = document.querySelectorAll("section");
 const navList = document.getElementById("navbar__list");
 
@@ -34,8 +44,8 @@ function dynamicNavigation() {
         navList.appendChild(navItem);
         navItem.appendChild(anchor);
     };
-} 
- 
+}
+
 // Set navigation-items as active when they are clicked
 // This function is derived from www.w3schools.com
 function addActiveClassClick () {
@@ -51,7 +61,6 @@ function addActiveClassClick () {
         });
     };
 }
-
 // Add class 'active' to section when near top of viewport
 function viewPortClass () {
     for (section of sections) {
@@ -63,24 +72,21 @@ function viewPortClass () {
             &&  viewedSection.right <= (window.innerWidth || document.documentElement.clientWidth)) 
             { 
                 // add class name to section and corresponding list item
+                // I commented this out because although it is working it is throwing an error which I cannot seem to fix
                 section.classList.add("your-active-class");
-                document.querySelector("#navbar__list li." + section.getAttribute("id")).classList.add("active-nav-item");
+                /*document.querySelector("#navbar__list li." + section.getAttribute("id")).classList.add("active-nav-item");*/
             } 
             else { 
                 // remove class name from section and corresponding list item
                 section.classList.remove("your-active-class");
-                document.querySelector("#navbar__list li." + section.getAttribute("id")).classList.remove("active-nav-item");
+                /*document.querySelector("#navbar__list li." + section.getAttribute("id")).classList.remove("active-nav-item", false);*/
             }
     };
 };
 
-document.addEventListener("scroll", function() {
-    viewPortClass();
-});
-
 // Scroll to section on link click
 function scrollingSmoothly() {
-    const anchorLinks = document.querySelectorAll("#navbar__list li a");
+    const anchorLinks = document.querySelectorAll("ul li a");
     for (const anchorLink of anchorLinks){
         anchorLink.addEventListener("click", ScrollToSection);
     }
@@ -90,9 +96,3 @@ function scrollingSmoothly() {
         document.querySelector(clickedAnchorLink).scrollIntoView({behavior:"smooth"});
     }; 
 };
-
-//Build navigation 
-window.onload = dynamicNavigation;
-scrollingSmoothly();
-addActiveClassClick();
-
